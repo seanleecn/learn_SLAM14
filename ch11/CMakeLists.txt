@@ -15,15 +15,18 @@ include_directories( ${Sophus_INCLUDE_DIRS} )
 
 # g2o 
 find_package( G2O REQUIRED )
+if (NOT G2O_FOUND)
+    message(FATAL_ERROR "G2O Not Found!")
+endif (NOT G2O_FOUND)
 include_directories( ${G2O_INCLUDE_DIRS} )
 
 find_package( Cholmod REQUIRED )
 include_directories( ${CHOLMOD_INCLUDE_DIR} )
 
 # gtsam 
-find_package( GTSAMCMakeTools )
-find_package( GTSAM REQUIRED )
-include_directories( ${GTSAM_INCLUDE_DIR} )
+# find_package( GTSAMCMakeTools )
+# find_package( GTSAM REQUIRED )
+# include_directories( ${GTSAM_INCLUDE_DIR} )
 
 
 # Ceres 
@@ -42,7 +45,7 @@ target_link_libraries( pose_graph_g2o_lie
     ${Sophus_LIBRARIES}
 )
 
-add_executable( pose_graph_gtsam pose_graph_gtsam.cpp )
-target_link_libraries( pose_graph_gtsam
-    ${CHOLMOD_LIBRARIES} gtsam
-)
+# add_executable( pose_graph_gtsam pose_graph_gtsam.cpp )
+# target_link_libraries( pose_graph_gtsam
+#     ${CHOLMOD_LIBRARIES} gtsam
+# )

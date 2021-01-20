@@ -47,8 +47,8 @@ int main( int argc, char** argv )
     cout<<"正在将图像转换为点云..."<<endl;
     
     // 定义点云使用的格式：这里用的是XYZRGB
-    typedef pcl::PointXYZRGB PointT; 
-    typedef pcl::PointCloud<PointT> PointCloud;
+    typedef pcl::PointXYZRGB PointT; //点
+    typedef pcl::PointCloud<PointT> PointCloud;//点云
     
     // 新建一个点云
     PointCloud::Ptr pointCloud( new PointCloud ); 

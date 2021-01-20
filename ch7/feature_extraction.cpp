@@ -53,7 +53,7 @@ int main ( int argc, char** argv )
         if ( dist < min_dist ) min_dist = dist;
         if ( dist > max_dist ) max_dist = dist;
     }
-    
+
     // 仅供娱乐的写法
     min_dist = min_element( matches.begin(), matches.end(), [](const DMatch& m1, const DMatch& m2) {return m1.distance<m2.distance;} )->distance;
     max_dist = max_element( matches.begin(), matches.end(), [](const DMatch& m1, const DMatch& m2) {return m1.distance<m2.distance;} )->distance;

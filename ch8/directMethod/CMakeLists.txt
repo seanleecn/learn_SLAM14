@@ -11,12 +11,12 @@ find_package( OpenCV )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
 find_package( G2O )
-include_directories( ${G2O_INCLUDE_DIRS} ) 
+include_directories( ${G2O_INCLUDE_DIRS} )
 
 include_directories( "/usr/include/eigen3" )
 
-set( G2O_LIBS 
-    g2o_core g2o_types_sba g2o_solver_csparse g2o_stuff g2o_csparse_extension 
+set( G2O_LIBS
+    g2o_core g2o_types_sba g2o_solver_csparse g2o_stuff g2o_csparse_extension
 )
 
 add_executable( direct_sparse direct_sparse.cpp )

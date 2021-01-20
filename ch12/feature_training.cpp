@@ -1,4 +1,5 @@
 #include "DBoW3/DBoW3.h"
+#include "DBoW3/Vocabulary.h"//防止DBoW3命名空间报错
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/features2d/features2d.hpp>
@@ -20,7 +21,7 @@ int main( int argc, char** argv )
     vector<Mat> images; 
     for ( int i=0; i<10; i++ )
     {
-        string path = "./data/"+to_string(i+1)+".png";
+        string path = "../data/"+to_string(i+1)+".png";
         images.push_back( imread(path) );
     }
     // detect ORB features

@@ -1,3 +1,5 @@
+# 学习视觉SLAM十四讲(第一版)
+
 # NOTE
 [Slambook 2](https://github.com/gaoxiang12/slambook2) has be released since 2019.8 which has better support on Ubuntu 18.04 and has a lot of new features. Slambook 1 will still be available on github but I suggest new readers switch to the second version. 
 

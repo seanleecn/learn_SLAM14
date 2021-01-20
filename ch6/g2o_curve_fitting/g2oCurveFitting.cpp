@@ -1,3 +1,5 @@
+/*SLAMBOOK2里面，使用智能指针实现G2O的版本*/
+
 #include <iostream>
 #include <g2o/core/g2o_core_api.h>
 #include <g2o/core/base_vertex.h>

@@ -12,8 +12,8 @@
 #include <g2o/solvers/dense/linear_solver_dense.h>
 #include <g2o/solvers/cholmod/linear_solver_cholmod.h>
 
-#include <sophus/se3.h>
-#include <sophus/so3.h>
+#include <sophus/se3.hpp>
+#include <sophus/so3.hpp>
 using namespace std;
 using Sophus::SE3;
 using Sophus::SO3;

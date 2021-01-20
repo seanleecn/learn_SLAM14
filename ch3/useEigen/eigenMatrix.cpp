@@ -93,7 +93,7 @@ int main( int argc, char** argv )
     // 直接求逆
     Eigen::Matrix<double,MATRIX_SIZE,1> x = matrix_NN.inverse()*v_Nd;
     cout <<"time use in normal inverse is " << 1000* (clock() - time_stt)/(double)CLOCKS_PER_SEC << "ms"<< endl;
-    
+
 	// 通常用矩阵分解来求，例如QR分解，速度会快很多
     time_stt = clock();
     x = matrix_NN.colPivHouseholderQr().solve(v_Nd);
